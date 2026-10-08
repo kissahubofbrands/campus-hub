@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CampusConnect | Student Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">🎓</div>
+
+        <div>
+            <h2>CampusConnect</h2>
+            <span>Student Portal</span>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <p class="menu-title">MAIN</p>
+
+        <a href="#" class="active">🏠 Dashboard</a>
+
+        <a href="#announcements">📢 Announcements</a>
+
+        <a href="#timetable">🕐 Timetable</a>
+
+        <a href="#events">📅 Events</a>
+
+        <a href="#deadlines">⏰ Deadlines</a>
+
+        <a href="#notifications">🔔 Notifications</a>
+
+        <p class="menu-title">ACCOUNT</p>
+
+        <a href="#">👤 My Profile</a>
+
+        <a href="login.html" onclick="logout()">🚪 Logout</a>
+
+    </nav>
+
+</aside>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+<!-- TOPBAR -->
+
+<header class="topbar">
+
+    <div class="search-box">
+
+        🔍
+
+        <input
+            type="text"
+            placeholder="Search announcements, events..."
+        >
+
+    </div>
+
+    <div class="user-area">
+
+        <div class="notification-icon">
+            🔔
+            <span>3</span>
+        </div>
+
+        <div class="user">
+
+            <div class="avatar">S</div>
+
+            <div>
+                <strong>Student</strong>
+                <small>CSE • III Year</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- CONTENT -->
+
+<section class="content">
+
+    <!-- PAGE TITLE -->
+
+    <div class="page-title">
+
+        <div>
+
+            <h1>Student Dashboard</h1>
+
+            <p>
+                Everything you need from your college, in one place.
+            </p>
+
+        </div>
+
+        <div class="today">
+            Thursday, 08 October 2026
+        </div>
+
+    </div>
+
+
+    <!-- WELCOME -->
+
+    <div class="welcome">
+
+        <div>
+
+            <h2>Good Afternoon 👋</h2>
+
+            <p>
+                Stay informed and never miss an important
+                college update again.
+            </p>
+
+        </div>
+
+        <div class="welcome-stat">
+
+            <strong>100%</strong>
+            <span>Centralized Information</span>
+
+        </div>
+
+    </div>
+
+
+    <!-- STATISTICS -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <div>
+                <span>ANNOUNCEMENTS</span>
+                <h2>05</h2>
+                <small>2 new today</small>
+            </div>
+
+            <div class="stat-icon blue">📢</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div>
+                <span>UPCOMING EVENTS</span>
+                <h2>03</h2>
+                <small>Next event in 4 days</small>
+            </div>
+
+            <div class="stat-icon purple">📅</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div>
+                <span>PENDING DEADLINES</span>
+                <h2>02</h2>
+                <small>Take action soon</small>
+            </div>
+
+            <div class="stat-icon orange">⏰</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div>
+                <span>NOTIFICATIONS</span>
+                <h2>07</h2>
+                <small>3 unread</small>
+            </div>
+
+            <div class="stat-icon green">🔔</div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TWO COLUMN -->
+
+    <div class="dashboard-grid">
+
+
+        <!-- LEFT -->
+
+        <div>
+
+
+            <!-- ANNOUNCEMENTS -->
+
+            <div class="card" id="announcements">
+
+                <div class="card-header">
+
+                    <h2>Latest Announcements</h2>
+
+                    <a href="#">View all →</a>
+
+                </div>
+
+
+                <div class="announcement">
+
+                    <div class="announcement-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <h3>Internal Assessment – II</h3>
+
+                        <p>
+                            IA-2 examinations will begin from
+                            October 15. Check the examination
+                            schedule for details.
+                        </p>
+
+                        <small>
+                            Academic Office • 2 hours ago
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="announcement">
+
+                    <div class="announcement-icon">
+                        🚀
+                    </div>
+
+                    <div>
+
+                        <h3>College Innovation Hackathon</h3>
+
+                        <p>
+                            Registration is open for the upcoming
+                            college-level innovation hackathon.
+                        </p>
+
+                        <small>
+                            Innovation Cell • Today
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="announcement">
+
+                    <div class="announcement-icon">
+                        📌
+                    </div>
+
+                    <div>
+
+                        <h3>Important Campus Notice</h3>
+
+                        <p>
+                            Students are requested to follow the
+                            updated campus guidelines.
+                        </p>
+
+                        <small>
+                            Administration • Yesterday
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMETABLE -->
+
+            <div class="card" id="timetable">
+
+                <div class="card-header">
+
+                    <h2>Today's Timetable</h2>
+
+                    <a href="#">Full timetable →</a>
+
+                </div>
+
+
+                <table>
+
+                    <thead>
+
+                    <tr>
+                        <th>TIME</th>
+                        <th>SUBJECT</th>
+                        <th>ROOM</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr class="current-class">
+
+                        <td>09:00 – 10:00</td>
+
+                        <td>
+                            <strong>Java Programming</strong>
+                        </td>
+
+                        <td>Room 301</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>10:00 – 11:00</td>
+
+                        <td>
+                            <strong>Data Structures</strong>
+                        </td>
+
+                        <td>Lab 02</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>11:15 – 12:15</td>
+
+                        <td>
+                            <strong>Computer Networks</strong>
+                        </td>
+
+                        <td>Room 205</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>01:30 – 02:30</td>
+
+                        <td>
+                            <strong>Artificial Intelligence</strong>
+                        </td>
+
+                        <td>Room 402</td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>02:30 – 03:30</td>
+
+                        <td>
+                            <strong>Project Work</strong>
+                        </td>
+
+                        <td>Innovation Lab</td>
+
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div>
+
+
+            <!-- EVENTS -->
+
+            <div class="card" id="events">
+
+                <div class="card-header">
+
+                    <h2>Upcoming Events</h2>
+
+                    <a href="#">View all →</a>
+
+                </div>
+
+
+                <div class="event">
+
+                    <div class="event-date">
+
+                        <strong>12</strong>
+                        <span>OCT</span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>College Innovation Hackathon</h3>
+
+                        <p>📍 Innovation Block</p>
+                        <p>🕘 09:00 AM</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event">
+
+                    <div class="event-date">
+
+                        <strong>18</strong>
+                        <span>OCT</span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Technical Symposium</h3>
+
+                        <p>📍 Main Auditorium</p>
+                        <p>🕘 10:00 AM</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event">
+
+                    <div class="event-date">
+
+                        <strong>25</strong>
+                        <span>OCT</span>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Annual Sports Day</h3>
+
+                        <p>📍 College Ground</p>
+                        <p>🕘 08:00 AM</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DEADLINES -->
+
+            <div class="card" id="deadlines">
+
+                <div class="card-header">
+
+                    <h2>Important Deadlines</h2>
+
+                    <a href="#">View all →</a>
+
+                </div>
+
+
+                <div class="deadline">
+
+                    <div>
+
+                        <h3>Project Documentation</h3>
+
+                        <p>Final submission</p>
+
+                    </div>
+
+                    <span>OCT 14</span>
+
+                </div>
+
+
+                <div class="deadline">
+
+                    <div>
+
+                        <h3>Hackathon Registration</h3>
+
+                        <p>Registration closes</p>
+
+                    </div>
+
+                    <span>OCT 12</span>
+
+                </div>
+
+
+                <div class="deadline">
+
+                    <div>
+
+                        <h3>Assignment Submission</h3>
+
+                        <p>Data Structures</p>
+
+                    </div>
+
+                    <span>OCT 16</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOTIFICATIONS -->
+
+            <div class="card" id="notifications">
+
+                <div class="card-header">
+
+                    <h2>Recent Notifications</h2>
+
+                </div>
+
+                <div class="notification-item">
+                    🔔 New announcement received
+                </div>
+
+                <div class="notification-item">
+                    📅 New college event added
+                </div>
+
+                <div class="notification-item">
+                    ⏰ Deadline approaching
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
