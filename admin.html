@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CampusConnect | Admin</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">🎓</div>
+
+        <div>
+            <h2>CampusConnect</h2>
+            <span>Management Portal</span>
+        </div>
+
+    </div>
+
+    <nav>
+
+        <p class="menu-title">ADMIN</p>
+
+        <a href="#" class="active">📊 Dashboard</a>
+
+        <a href="#post">📢 Post Announcement</a>
+
+        <a href="#events">📅 Manage Events</a>
+
+        <a href="#deadline">⏰ Manage Deadlines</a>
+
+        <a href="#schedule">🕐 Manage Timetable</a>
+
+        <p class="menu-title">SYSTEM</p>
+
+        <a href="#">🔔 Notifications</a>
+
+        <a href="#">👥 Students</a>
+
+        <a href="login.html">🚪 Logout</a>
+
+    </nav>
+
+</aside>
+
+
+<main class="main">
+
+<header class="topbar">
+
+    <div class="search-box">
+
+        🔍
+        <input
+            type="text"
+            placeholder="Search..."
+        >
+
+    </div>
+
+    <div class="user-area">
+
+        <div class="notification-icon">
+            🔔
+        </div>
+
+        <div class="user">
+
+            <div class="avatar">A</div>
+
+            <div>
+                <strong>Administrator</strong>
+                <small>College Management</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<section class="content">
+
+    <div class="page-title">
+
+        <div>
+
+            <h1>Management Dashboard</h1>
+
+            <p>
+                Publish and manage all college information
+                from one centralized platform.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADMIN STATS -->
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <div>
+                <span>ACTIVE STUDENTS</span>
+                <h2>2,450</h2>
+                <small>Registered users</small>
+            </div>
+
+            <div class="stat-icon blue">👥</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div>
+                <span>ANNOUNCEMENTS</span>
+                <h2>28</h2>
+                <small>Published this month</small>
+            </div>
+
+            <div class="stat-icon purple">📢</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div>
+                <span>UPCOMING EVENTS</span>
+                <h2>08</h2>
+                <small>Currently scheduled</small>
+            </div>
+
+            <div class="stat-icon orange">📅</div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div>
+                <span>DELIVERED</span>
+                <h2>98%</h2>
+                <small>Information delivery</small>
+            </div>
+
+            <div class="stat-icon green">✓</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="dashboard-grid">
+
+
+        <!-- CREATE ANNOUNCEMENT -->
+
+        <div class="card" id="post">
+
+            <div class="card-header">
+
+                <h2>Post New Announcement</h2>
+
+            </div>
+
+            <label>Announcement Title</label>
+
+            <input
+                type="text"
+                id="announcementTitle"
+                class="form-input"
+                placeholder="Enter announcement title"
+            >
+
+            <label>Message</label>
+
+            <textarea
+                id="announcementMessage"
+                class="form-input"
+                rows="5"
+                placeholder="Write announcement..."
+            ></textarea>
+
+            <label>Priority</label>
+
+            <select
+                id="announcementPriority"
+                class="form-input"
+            >
+
+                <option>Normal</option>
+                <option>Important</option>
+                <option>Urgent</option>
+
+            </select>
+
+            <button
+                class="primary-btn"
+                onclick="postAnnouncement()"
+            >
+                📢 Publish Announcement
+            </button>
+
+        </div>
+
+
+        <!-- CREATE EVENT -->
+
+        <div class="card" id="events">
+
+            <div class="card-header">
+
+                <h2>Add New Event</h2>
+
+            </div>
+
+            <label>Event Name</label>
+
+            <input
+                type="text"
+                id="eventName"
+                class="form-input"
+                placeholder="Enter event name"
+            >
+
+            <label>Date</label>
+
+            <input
+                type="date"
+                id="eventDate"
+                class="form-input"
+            >
+
+            <label>Venue</label>
+
+            <input
+                type="text"
+                id="eventVenue"
+                class="form-input"
+                placeholder="Enter venue"
+            >
+
+            <label>Time</label>
+
+            <input
+                type="time"
+                id="eventTime"
+                class="form-input"
+            >
+
+            <button
+                class="primary-btn"
+                onclick="addEvent()"
+            >
+                📅 Add Event
+            </button>
+
+        </div>
+
+
+        <!-- DEADLINE -->
+
+        <div class="card" id="deadline">
+
+            <div class="card-header">
+
+                <h2>Add Deadline</h2>
+
+            </div>
+
+            <label>Task / Submission</label>
+
+            <input
+                type="text"
+                id="deadlineTask"
+                class="form-input"
+                placeholder="Enter task name"
+            >
+
+            <label>Due Date</label>
+
+            <input
+                type="date"
+                id="deadlineDate"
+                class="form-input"
+            >
+
+            <label>Department</label>
+
+            <select class="form-input">
+
+                <option>All Departments</option>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>EEE</option>
+                <option>Mechanical</option>
+                <option>Civil</option>
+
+            </select>
+
+            <button
+                class="primary-btn"
+                onclick="addDeadline()"
+            >
+                ⏰ Add Deadline
+            </button>
+
+        </div>
+
+
+        <!-- TIMETABLE -->
+
+        <div class="card" id="schedule">
+
+            <div class="card-header">
+
+                <h2>Update Timetable</h2>
+
+            </div>
+
+            <label>Subject</label>
+
+            <input
+                type="text"
+                class="form-input"
+                placeholder="Enter subject"
+            >
+
+            <label>Date</label>
+
+            <input
+                type="date"
+                class="form-input"
+            >
+
+            <label>Time</label>
+
+            <input
+                type="time"
+                class="form-input"
+            >
+
+            <label>Room</label>
+
+            <input
+                type="text"
+                class="form-input"
+                placeholder="Room number"
+            >
+
+            <button class="primary-btn">
+                🕐 Update Timetable
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ACTIVITY -->
+
+    <div class="card">
+
+        <div class="card-header">
+
+            <h2>Recent Management Activity</h2>
+
+        </div>
+
+        <div class="activity">
+            <span>📢</span>
+            <div>
+                <strong>Internal Assessment announcement published</strong>
+                <small>2 hours ago</small>
+            </div>
+        </div>
+
+        <div class="activity">
+            <span>📅</span>
+            <div>
+                <strong>Technical Symposium event added</strong>
+                <small>Yesterday</small>
+            </div>
+        </div>
+
+        <div class="activity">
+            <span>⏰</span>
+            <div>
+                <strong>Project submission deadline updated</strong>
+                <small>Yesterday</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
